@@ -20,7 +20,8 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'Deploying application...'
+                echo 'Deploying application to Nginx...'
+                sh 'sudo cp index.html /var/www/html/index.html'
                 echo 'Deployment completed successfully!'
             }
         }
